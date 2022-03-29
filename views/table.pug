@@ -1,0 +1,39 @@
+html
+    head
+    body
+    h1="Unicorns table"
+    table(border=2)
+        thead
+            th="id"
+            th
+              a(href="http://localhost:3400/sortitem/name")  name 
+            th
+              a(href="http://localhost:3400/sortitem/dob")  dob
+            th
+              a(href="http://localhost:3400/sortitem/loves")  loves
+            th
+              a(href="http://localhost:3400/sortitem/weight")  weight
+            th
+              a(href="http://localhost:3400/sortitem/gender")  gender
+            th
+              a(href="http://localhost:3400/sortitem/vampires")  vampires
+        tbody 
+             each val,i in unicorns
+                  tr
+                    td=val._id
+                    td=val.name
+                    td=val.dob
+                    td=val.loves
+                    td=val.weight 
+                    td=val.gender
+                    td=val.vampires
+                    td
+                        button
+                              a(href="http://localhost:3400/deleteitem/"+val._id) Delete
+                    td 
+                        button
+                              a(href="http://localhost:3400/updatedoc/"+val._id) UpdatetDoc
+    br
+    br
+    button
+        a(href="http://localhost:3400/insertdoc") InsertDoc         
